@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.dhirajborade.service.demo.WelcomeService;
 
 /**
- * Servlet implementation class WelcomeServlet
+ * Servlet implementation class WelcomeServletNew
  */
 @WebServlet("/WelcomeServletNew")
 public class WelcomeServletNew extends HttpServlet {
