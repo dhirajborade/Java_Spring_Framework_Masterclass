@@ -1,11 +1,15 @@
 package com.dhirajborade.SpringDemo.Domain;
 
+import com.dhirajborade.SpringDemo.Service.BusinessService;
+
 public class Organization {
 
 	private String companyName;
 	private int yearOfIncorporation;
 	private String postalCode;
 	private int employeeCount;
+	private String slogan;
+	private BusinessService businessService;
 
 	public Organization() {
 	}
@@ -15,9 +19,8 @@ public class Organization {
 		this.yearOfIncorporation = yearOfIncorporation;
 	}
 
-	public void corporateSlogan() {
-		String slogan = "We build the ultimate driving machines!";
-		System.out.println(slogan);
+	public String corporateSlogan() {
+		return this.slogan;
 	}
 
 	public void setPostalCode(String postalCode) {
@@ -26,6 +29,18 @@ public class Organization {
 
 	public void setEmployeeCount(int employeeCount) {
 		this.employeeCount = employeeCount;
+	}
+
+	public void setSlogan(String slogan) {
+		this.slogan = slogan;
+	}
+
+	public void setBusinessService(BusinessService businessService) {
+		this.businessService = businessService;
+	}
+	
+	public String corporateService() {
+		return this.businessService.offerService(this.companyName);
 	}
 
 	@Override

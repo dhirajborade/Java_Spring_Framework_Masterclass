@@ -16,10 +16,12 @@ public class DISetterApp {
 		Organization org = (Organization) ctx.getBean("myorg");
 
 		// Invoke the company slogan via the bean
-		org.corporateSlogan();
+		System.out.println(org.corporateSlogan());
 
 		// Print organization details
 		System.out.println(org);
+		
+		System.out.println(org.corporateService());
 
 		// Close the application context (container)
 		((ClassPathXmlApplicationContext) ctx).close();
